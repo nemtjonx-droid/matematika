@@ -130,3 +130,6 @@ function res(){const p=st.sc*100/st.qs.length,m=p>=80?'Ajoyib! 🎉':p>=50?'Yaxs
 app.innerHTML=`<div class="card"><div class="top"><span>${st.g}-sinf natijasi</span></div><div class="big">${st.sc}/${st.qs.length}</div><p style="text-align:center">${m}</p>${st.w.length?`<h3>Xatolar ustida ishlash</h3>${st.w.map(w=>`<div class="w"><b>${w.q}</b><br>To'g'ri javob: <b>${w.a}</b><br><span style="color:var(--mu)">${w.e}</span></div>`).join('')}`:''}<br><button class="b" onclick="start(${st.g})">Yana urinib ko'rish</button><br><br><button class="b" style="background:var(--bd);color:var(--tx)" onclick="menu(${st.g})">Orqaga qaytish</button></div>`}
 home();
 
+
+
+// nimaga vercelga chiqarmayapti
