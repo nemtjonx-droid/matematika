@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="uz"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Matematika testlari</title>
-<style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#6b7385;--pr:#4f46e5;--prt:#fff;--ok:#16a34a;--okb:#dcfce7;--no:#dc2626;--nob:#fee2e2;--bd:#e3e6ef}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#14161f;--card:#1e212d;--tx:#eceef6;--mu:#9aa1b5;--pr:#818cf8;--prt:#14161f;--ok:#4ade80;--okb:#12301f;--no:#f87171;--nob:#3a1717;--bd:#2d3142}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#14161f;--card:#1e212d;--tx:#eceef6;--mu:#9aa1b5;--pr:#818cf8;--prt:#14161f;--ok:#4ade80;--okb:#12301f;--no:#f87171;--nob:#3a1717;--bd:#2d3142}
-*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
-main{max-width:560px;margin:0 auto;padding:20px 16px 40px}
-h1{font-size:1.6rem;margin:8px 0 4px}p.s{color:var(--mu);margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.g{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 4px;font-size:1.5rem;font-weight:700;color:var(--tx);cursor:pointer}
-.g small{display:block;font-size:.75rem;font-weight:400;color:var(--mu)}
-.g:hover{border-color:var(--pr)}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}
-.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:var(--mu);font-size:.9rem}
-.bar{height:6px;background:var(--bd);border-radius:9px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;background:var(--pr);transition:width .3s}
-.q{font-size:1.35rem;font-weight:600;margin:0 0 18px;line-height:1.4}
-.o{display:block;width:100%;text-align:left;background:var(--bg);border:2px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:10px;font-size:1.1rem;color:var(--tx);cursor:pointer}
-.o:hover:not(:disabled){border-color:var(--pr)}
-.o.ok{background:var(--okb);border-color:var(--ok)}.o.no{background:var(--nob);border-color:var(--no)}
-.ex{margin:6px 0 14px;padding:12px;border-radius:10px;background:var(--bg);color:var(--mu);font-size:.95rem}
-.b{background:var(--pr);color:var(--prt);border:0;border-radius:12px;padding:13px 20px;font-size:1rem;font-weight:600;cursor:pointer;width:100%}
-.l{background:none;border:0;color:var(--pr);cursor:pointer;font-size:.95rem;padding:0}
-.big{font-size:3rem;font-weight:800;text-align:center;margin:10px 0}
-.w{padding:10px 0;border-top:1px solid var(--bd);font-size:.95rem}.b small{font-weight:400;opacity:.85}.m{padding:12px;border-radius:12px;margin:10px 0;white-space:pre-wrap;line-height:1.5}.m.me{background:var(--pr);color:var(--prt);margin-left:24px}.m.ai{background:var(--card);border:1px solid var(--bd);margin-right:24px}.in{display:flex;gap:8px;align-items:flex-end;margin-top:12px}.in textarea{flex:1;border:2px solid var(--bd);border-radius:12px;padding:10px;background:var(--card);color:var(--tx);font:inherit}.in .b{width:auto}
-.g,.card,.b,.o{transform-style:preserve-3d;}.g{box-shadow:0 5px 0 var(--bd),0 10px 16px rgba(0,0,0,.12)}.g .z{display:block;transform:translateZ(26px);text-shadow:0 4px 6px rgba(0,0,0,.25)}.g small{transform:translateZ(12px)}.card{box-shadow:0 6px 0 var(--bd),0 14px 26px rgba(0,0,0,.1)}.b{box-shadow:0 5px 0 rgba(0,0,0,.28)}.o{box-shadow:0 4px 0 var(--bd)}.hv{transition:transform .08s linear,box-shadow .3s}.g.hv{box-shadow:0 12px 0 var(--bd),0 26px 34px rgba(0,0,0,.28)}.card.hv{box-shadow:0 10px 0 var(--bd),0 24px 40px rgba(0,0,0,.2)}.b.hv{box-shadow:0 9px 0 rgba(0,0,0,.28),0 18px 24px rgba(0,0,0,.22)}.o.hv{box-shadow:0 8px 0 var(--bd),0 14px 22px rgba(0,0,0,.18)}@media (prefers-reduced-motion:reduce){.g,.card,.b,.o{transition:none;transform:none!important}}</style></head><body><main id="app"></main>
-<script>
 const R=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
 const sh=a=>a.map(x=>[Math.random(),x]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]);
 const gcd=(a,b)=>b?gcd(b,a%b):a;
@@ -159,8 +129,4 @@ function next(){st.done=false;st.i++;st.i<st.qs.length?show():res()}
 function res(){const p=st.sc*100/st.qs.length,m=p>=80?'Ajoyib! 🎉':p>=50?'Yaxshi, yana mashq qil 💪':'Mashqni davom ettir, albatta uddalaysan 🌱';
 app.innerHTML=`<div class="card"><div class="top"><span>${st.g}-sinf natijasi</span></div><div class="big">${st.sc}/${st.qs.length}</div><p style="text-align:center">${m}</p>${st.w.length?`<h3>Xatolar ustida ishlash</h3>${st.w.map(w=>`<div class="w"><b>${w.q}</b><br>To'g'ri javob: <b>${w.a}</b><br><span style="color:var(--mu)">${w.e}</span></div>`).join('')}`:''}<br><button class="b" onclick="start(${st.g})">Yana urinib ko'rish</button><br><br><button class="b" style="background:var(--bd);color:var(--tx)" onclick="menu(${st.g})">Orqaga qaytish</button></div>`}
 home();
-(()=>{const S='.g,.card,.b,.o';let cur=null;const rs=e=>{e.style.transform='';e.classList.remove('hv')};
-document.addEventListener('pointermove',ev=>{return;const el=ev.target.closest?ev.target.closest(S):null;if(cur&&cur!==el)rs(cur);cur=el;if(!el)return;const r=el.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5,c=el.classList.contains('card');el.classList.add('hv');el.style.transform=`perspective(800px) rotateX(${(-y*(c?4:14)).toFixed(2)}deg) rotateY(${(x*(c?4:14)).toFixed(2)}deg) translateZ(${c?0:14}px)`});
-document.addEventListener('pointerout',ev=>{if(cur&&!ev.relatedTarget){rs(cur);cur=null}});
-window.addEventListener('blur',()=>{if(cur){rs(cur);cur=null}})})();
-</script></body></html>
+
